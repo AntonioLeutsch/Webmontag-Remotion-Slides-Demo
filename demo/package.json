@@ -1,0 +1,24 @@
+{
+  "name": "remotion-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "player": "vite --port 5174",
+    "render": "remotion render src/index.ts Personalized out/personalized.mp4",
+    "render:stats": "remotion render src/index.ts Stats out/stats.mp4",
+    "render:batch": "node batch.mjs"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.539",
+    "@remotion/player": "4.0.539",
+    "@remotion/renderer": "4.0.539",
+    "@remotion/bundler": "4.0.539",
+    "@vitejs/plugin-react": "^5.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "4.0.539",
+    "vite": "^7.0.0",
+    "zod": "^3.25.0"
+  }
+}

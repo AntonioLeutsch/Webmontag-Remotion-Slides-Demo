@@ -1,0 +1,7 @@
+{
+  "name": "remotion-slides",
+  "private": true,
+  "type": "module",
+  "scripts": { "dev": "vite --port 5180 --strictPort --open", "build": "vite build" },
+  "dependencies": { "reveal.js": "^5.2.1", "vite": "^7.0.0" }
+}

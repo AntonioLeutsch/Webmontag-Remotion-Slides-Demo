@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Remotion – Speedtalk</title>
+  <script type="module" src="/main.js"></script>
+</head>
+<body>
+<div class="reveal"><div class="slides">
+
+  <section data-background-gradient="radial-gradient(circle at 30% 20%, #0d3a29, #08130f)">
+    <p class="kicker">Speedtalk</p>
+    <h1><span class="pink">10.000</span> Videos erstellen?</h1>
+    <p class="fragment">Premiere: unmöglich. Remotion: <b>ein Skript</b>.</p>
+  </section>
+
+  <section>
+    <h2>Was ist Remotion?</h2>
+    <ul>
+      <li class="fragment">Videos &amp; Motion Graphics mit <b>React</b></li>
+      <li class="fragment">Video = <code>f(frame) → Bild</code>, am Ende eine echte MP4</li>
+      <li class="fragment">Start: <code>npx create-video</code></li>
+    </ul>
+    <pre class="fragment"><code class="language-tsx" data-trim data-noescape>const frame = useCurrentFrame();
+const s = spring({ frame, fps });
+return &lt;h1 style={{ transform: `scale(${s})` }}&gt;Hallo&lt;/h1&gt;;</code></pre>
+  </section>
+
+  <section>
+    <h2>Drei Wege zum Video</h2>
+    <div class="cards">
+      <div class="card fragment"><div class="ico">⌨️</div><h3>Per Code</h3><p>Komponenten, CSS, Daten – versionierbar wie Software</p></div>
+      <div class="card fragment"><div class="ico">🎛️</div><h3>Im Studio</h3><p>Timeline, Props live anpassen, direkt rendern</p></div>
+      <div class="card fragment"><div class="ico">🤖</div><h3>Per KI-Agent</h3><p>Skills &amp; Plugins: Idee → Video</p></div>
+    </div>
+  </section>
+
+  <section data-background-color="#08130f">
+    <h2>Der Player <span class="grad">★</span></h2>
+      <h3 class="small" style="opacity:1">Live im Browser, kein Rendern: Name tippen, Farbe wählen</h3>
+    <iframe class="demo" data-src="http://localhost:5174" allow="autoplay"></iframe>
+    <p class="small">Start: <code>cd demo &amp;&amp; npm run player</code></p>
+  </section>
+
+  <section>
+    <h2>Automatisierung</h2>
+    <p>Template einmal bauen · Daten rein · beliebig oft rendern</p>
+    <div class="cols">
+      <div>
+        <pre><code class="language-js" data-trim>for (const p of people) {
+  await renderMedia({
+    composition, serveUrl,
+    outputLocation: `out/${p.name}.mp4`,
+    inputProps: p,
+  });
+}</code></pre>
+        <p class="small">Eigener Server · AWS Lambda · Browser</p>
+      </div>
+      <video src="media/personalized.mp4" muted loop playsinline data-autoplay></video>
+    </div>
+    <p class="small fragment">Jahresrückblicke à la Spotify Wrapped · Untertitel · Musikvisualisierung</p>
+  </section>
+
+  <section>
+    <h2>Zahlen</h2>
+    <video class="wide" src="media/stats.mp4" muted loop playsinline data-autoplay></video>
+    <p class="price fragment"><b>Kostenlos</b> bis 3 Personen, auch kommerziell<br><span>Größere Firmen: Lizenz nach Nutzung</span></p>
+  </section>
+
+  <section data-background-gradient="radial-gradient(circle at 70% 80%, #0d3a29, #08130f)">
+    <h2>Fazit</h2>
+    <p class="big fragment">Videoproduktion wird <span class="grad">Softwareentwicklung</span>.</p>
+    <p class="big fragment">Wer React (JavaScript) kann, kann jetzt auch Videos.</p>
+    <p class="small fragment"><code>npx create-video</code> · remotion.dev</p>
+  </section>
+
+</div></div>
+</body>
+</html>
